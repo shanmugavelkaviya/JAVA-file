@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class EvenDigits {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int number = sc.nextInt();
+        sc.close();
+
+        boolean foundEven = false;
+        String numStr = String.valueOf(number);
+
+        for (int i = 0; i < numStr.length(); i++) {
+            int digit = numStr.charAt(i) - '0';
+            if (digit % 2 == 0) {
+                System.out.println(digit);
+                foundEven = true;
+            }
+        }
+
+        if (!foundEven) {
+            System.out.println(-1);
+        }
+    }
+}
